@@ -1,53 +1,72 @@
-int main() {
+int main() { 
 
-    char op;
+    int op;
     double num1;
     double num2;
+    double result;
 
-    printf("Insert first number for calculation\n");
+    printf("Calculadora Sapin");
+    
+    do {
 
-    scanf("%lf", &num1);
+        printf("\nEscolha a operação para o cálculo");
+        printf("\n1 - Somar");
+        printf("\n2 - Subtrair");
+        printf("\n3 - Multiplicar");
+        printf("\n4 - Dividir");
+        printf("\n0 - Cancelar\n");
 
-    printf("Choose the operation\n");
+        scanf("%d", &op);
 
-    scanf(" %c", &op);
+        switch (op) {
 
-    printf("Insert second number for calculation\n");
+            case 1:
 
-    scanf("%lf", &num2);
+                printf("Insira o primeiro número para o cálculo: ");
+                scanf("%lf", &num1);
+                printf("Insira o segundo número para o cálculo: ");
+                scanf("%lf", &num2);
+                result = num1 + num2;
+                printf("Resultado: %.02lf", result);
 
-    switch (op) {
+            break;
 
-        case '+': printf("%.02f", num1 + num2);
+            case 2:
 
-        break;
-        
-        case '-': printf("%.02f", num1 - num2);
-            
-        break;
+                printf("Insira o primeiro número para o cálculo: ");
+                scanf("%lf", &num1);
+                printf("Insira o segundo número para o cálculo: ");
+                scanf("%lf", &num2);
+                result = num1 - num2;
+                printf("Resultado: %.02lf", result);
 
-        case '*': printf("%.02f", num1 * num2);
+            break;
 
-        break;
+            case 3:
 
-        case '/': 
+                printf("Insira o primeiro número para o cálculo: ");
+                scanf("%lf", &num1);
+                printf("Insira o segundo número para o cálculo: ");
+                scanf("%lf", &num2);
+                result = num1 * num2;
+                printf("Resultado: %.02lf", result);
 
-            if (num2 == 0) {
+            break;
 
-                printf("Cannot divide by zero");
+            case 4:
 
-            }
-            
-            else {
-            
-            printf("%.02f", num1 / num2);
+                printf("Insira o primeiro número para o cálculo: ");
+                scanf("%lf", &num1);
+                printf("Insira o segundo número para o cálculo: ");
+                scanf("%lf", &num2);
+                result = num1 / num2;
+                printf("Resultado: %.02lf", result);
 
-            }
+            break;
+        }
+    } while (op != 0);
 
-        break;
-
-        default: printf("Invalid operation");
-    }
+    printf("Sistema interrompido");
     
     return 0;
 }
