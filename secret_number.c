@@ -1,8 +1,12 @@
-int numero = rand() % 100 + 1;
+#include <stdlib.h>
+
+int main () {
+    
+    int numero = rand() % 100 + 1;
     int tentativa = 0;
     int contador = 7;
     
-    printf("Descubra o némuro secreto. Você tem 7 tentativas. Insira sua primeira tentativa: ");
+    printf("Descubra o número secreto. Você tem 7 tentativas. Insira sua primeira tentativa: ");
     
     while (tentativa != numero && contador > 0) {
     
@@ -33,5 +37,3 @@ int numero = rand() % 100 + 1;
     }
     return 0;
 }
-
-Não li a parte do srand e ficou assim. Me explica o que mudaria?
