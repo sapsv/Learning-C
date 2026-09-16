@@ -1,4 +1,8 @@
-int senha = 0;
+#include <stdio.h>
+
+int main() {
+    
+    int senha = 0;
     int i = 5;
     printf("Insert the three digits password\n");
 
