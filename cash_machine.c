@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() {
 
     int saldo = 1000;
