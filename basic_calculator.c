@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <math.h>
+
 int main() { 
 
     int op;
@@ -10,10 +13,13 @@ int main() {
     do {
 
         printf("\nEscolha a operação para o cálculo");
-        printf("\n1 - Somar");
-        printf("\n2 - Subtrair");
-        printf("\n3 - Multiplicar");
-        printf("\n4 - Dividir");
+        
+        printf("\n1 - Soma");
+        printf("\n2 - Subtraçao");
+        printf("\n3 - Multiplicaçao");
+        printf("\n4 - Divisao");
+        printf("\n5 - Potenciaçao");
+        printf("\n6 - Radiciacao");
         printf("\n0 - Cancelar\n");
 
         scanf("%d", &op);
@@ -60,6 +66,26 @@ int main() {
                 printf("Insira o segundo número para o cálculo: ");
                 scanf("%lf", &num2);
                 result = num1 / num2;
+                printf("Resultado: %.02lf", result);
+
+            break;
+
+            case 5:
+
+                printf("Insira o número para a base: ");
+                scanf("%lf", &num1);
+                printf("Insira o número para a potência: ");
+                scanf("%lf", &num2);
+                result = pow(num1, num2);
+                printf("Resultado: %.02lf", result);
+
+            break;
+
+            case 6:
+
+                printf("Insira o número para a raiz quadrada: ");
+                scanf("%lf", &num1);
+                result = sqrt(num1);
                 printf("Resultado: %.02lf", result);
 
             break;
