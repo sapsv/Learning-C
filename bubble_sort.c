@@ -28,7 +28,7 @@ int main() {
     
     for (int i = 0; i < sizeof(numeros) / sizeof(numeros[0]); i++) {
 
-        printf("%d", numeros[i]);
+        printf("%d ", numeros[i]);
     }
 
     return 0;
